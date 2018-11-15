@@ -1,14 +1,20 @@
-<h1> Cocktails </h1>
-<p>There are <%= @cocktails.count %> cocktails on this website</p>
-<% @cocktails.each do |cocktail| %>
-  <%= link_to cocktail.name, cocktail_path(cocktail) %>
-  <ul>
-    <% cocktail.doses.each do |dose| %>
-      <li>
-        <%= dose.description %>
-        <br>
-        <%= dose.ingredient.name %>
-      </li>
+<div class="container">
+  <h1> Cocktails </h1>
+  <p>There are <%= @cocktails.count %> cocktails on this website</p>
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-xs-12 col-sm-4">
+        <%= link_to cocktail_path(cocktail) do %>
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+            <div class="card-category"><%= cocktail.name %></div>
+            <% cocktail.doses.each do |dose| %>
+              <div class="card-description">
+                <p><%= dose.description %> - <%= dose.ingredient.name %></p>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
     <% end %>
-  </ul>
-<% end %>
+  </div>
+</div>
