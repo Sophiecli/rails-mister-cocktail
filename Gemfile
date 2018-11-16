@@ -39,6 +39,8 @@ gem 'simple_form'
 gem 'cloudinary'
 gem 'carrierwave', '~> 1.2'
 
+gem 'rest-client', '>= 2.0'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
