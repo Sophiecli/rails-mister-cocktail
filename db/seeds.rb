@@ -9,6 +9,11 @@
 require 'json'
 require 'open-uri'
 
+puts "Cleaning DB"
+Ingredient.destroy_all
+
+puts "Generating DB"
+
 url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 ingredient_serialized = open(url).read
 ingredient = JSON.parse(ingredient_serialized)
@@ -16,3 +21,5 @@ ingredient = JSON.parse(ingredient_serialized)
 ingredient['drinks'].each do |drink|
   Ingredient.create(name: drink["strIngredient1"])
 end
+
+puts "DB generated"
