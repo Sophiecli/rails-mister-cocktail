@@ -1,17 +1,28 @@
-<div class="container">
+<div class="banner" >
+  <div class="video_overlays">
+    <h1>Let it all flow</h1>
+    <%= link_to "Add your favourite", new_cocktail_path, class: 'btn btn-primary'  %>
+  </div>
+  <div class="banner-content">
+    <div class="video">
+      <video autoplay loop id="video-background" muted plays-inline>
+        <source src="https://player.vimeo.com/external/158148793.hd.mp4?s=8e8741dbee251d5c35a759718d4b0976fbf38b6f&profile_id=119&oauth2_token_id=57447761" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</div>
+<div class="container" class="background">
   <h1> Cocktails </h1>
   <p>There are <%= @cocktails.count %> cocktails on this website</p>
   <div class="row">
     <% @cocktails.each do |cocktail| %>
       <div class="col-xs-12 col-sm-4">
         <%= link_to cocktail_path(cocktail) do %>
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+          <div class="card" class ="overlay" style="background-image: url('<%= cocktail.photo? ? (cl_image_path cocktail.photo) : (image_path 'g_t.jpg')%>')">
             <div class="card-category"><%= cocktail.name %></div>
-            <% cocktail.doses.each do |dose| %>
-              <div class="card-description">
-                <p><%= dose.description %> - <%= dose.ingredient.name %></p>
-              </div>
-            <% end %>
+            <div class="card-description">
+              <p>See more</p>
+            </div>
           </div>
         <% end %>
       </div>

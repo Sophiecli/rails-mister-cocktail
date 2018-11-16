@@ -1,4 +1,4 @@
-<div class="navbar-wagon navbar-fixed-top">
+<div class="navbar-wagon">
   <!-- Logo -->
   <a href="/" class="navbar-wagon-brand">
     <!--     <img src="images/logo.png" alt="logo">
@@ -6,14 +6,16 @@
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
     <%= link_to "Add new Cocktail", new_cocktail_path  %>
+    <%= link_to "See All", cocktails_path  %>
   </div>
   <!-- Dropdown appearing on mobile only -->
-  <div class="navbar-wagon-item hidden-md hidden-lg">
+  <!-- <div class="navbar-wagon-item hidden-md hidden-lg">
     <div class="dropdown">
       <i class="fas fa-bars dropdown-toggle" data-toggle="dropdown" role="button"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
         <li><a href="#">Add New Cocktail</a></li>
+        <li><a href="#">See All</a></li>
       </ul>
     </div>
-  </div>
+  </div> -->
 </div>

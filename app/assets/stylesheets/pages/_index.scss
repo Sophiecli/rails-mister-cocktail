@@ -1,8 +1,4 @@
 // Import page-specific CSS files here.
 @import "home";
-
-.container {
-  max-width: 500px;
-  margin: auto;
-  height: 100vh;
-}
+@import 'cocktails';
+@import 'show';
