@@ -1,10 +1,7 @@
 // Specific CSS for your home-page
-
-
 .banner {
   color: white;
   text-align: center;
-  height: 100vh;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   display: flex;
@@ -23,19 +20,17 @@
   margin-bottom: 30px;
 }
 
-.banner-content {
+// VIDEO BANNER
+// .video_overlays {
+//   position: absolute;
+//   z-index: 300000;
+// }
 
-}
+// .video {
+//   z-index: 1;
+//   #video-background {
+//     max-width: 100vw;
+//     max-height: 100vh;
+//   }
+// }
 
-.video_overlays {
-  position: absolute;
-  z-index: 300000;
-}
-
-.video {
-  z-index: 1;
-  #video-background {
-    max-width: 100vw;
-    max-height: 100vh;
-  }
-}
