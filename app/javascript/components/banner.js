@@ -2,7 +2,7 @@ import Typed from 'typed.js';
 
 function loadDynamicBannerText() {
   new Typed('#banner-typed-text', {
-    strings: ["Raise your spirits", "Learn to cocktail!"],
+    strings: ["Cheers!", "Find Your Poison", "To raise your spirits", "Shaken, not stirred"],
     typeSpeed: 50,
     loop: true
   });

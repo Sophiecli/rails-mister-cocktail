@@ -1,12 +1,22 @@
 // Specific CSS for your home-page
+
+.container {
+  margin: 0px;
+  padding: 0px;
+}
+
 .banner {
   color: white;
   text-align: center;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-image: linear-gradient(-225deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 50%), url('https://res.cloudinary.com/sophiecli/image/upload/v1546141750/Mister%20Cocktail%20App/banner.jpg');
   background-size: cover !important;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 .banner h1 {
   font-size: 50px;
@@ -19,6 +29,22 @@
   color: rgb(255, 255, 255);
   margin-bottom: 30px;
 }
+
+.cocktail-list {
+  background-color: #cccccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+}
+
+.cocktail-heading {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+
 
 // VIDEO BANNER
 // .video_overlays {
