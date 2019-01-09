@@ -3,11 +3,22 @@
     <h1>
       <span id="banner-typed-text"></span>
     </h1>
+    <!-- Search bar -->
+    <%= form_tag cocktails_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control nav-search-box",
+        placeholder: "search" %>
+    <% end %>
+    <!-- <div class="banner-content">
+      Know what you like? Then dig deeper to find what you want
+      <i class="fas fa-angle-down fa-2x"></i>
+    </div> -->
   </div>
   <div class="cocktail-list">
     <div class="cocktail-heading">
       <h1> COCKTAILS </h1>
-      <p>123There are <%= @cocktails.count %> cocktails</p>
+      <p>There are <%= @cocktails.count %> cocktails</p>
     </div>
     <div class="row">
       <% @cocktails.each do |cocktail| %>
