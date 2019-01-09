@@ -8,10 +8,35 @@
 
 .btn {
   margin: 10px;
+  color: white;
+  background-color: transparent;
+}
+
+.btn:hover {
+  color: #da552f;
+  text-decoration: none;
+  border: 1px solid #da552f;
+  border-radius: 2px;
 }
 
 .img-round {
   border-radius: 50%;
   height: 3em;
   width: 3em;
+}
+
+.form-new {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.fa-trash {
+  color: white;
+  background-color: transparent;
+}
+
+.fa-trash:hover {
+  color: #da552f;
+  text-decoration: none;
 }

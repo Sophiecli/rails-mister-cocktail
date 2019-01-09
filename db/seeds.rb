@@ -9,10 +9,10 @@
 require 'json'
 require 'open-uri'
 
-puts "Cleaning DB"
+puts "Cleansing out ingredient database..."
 Ingredient.destroy_all
 
-puts "Generating DB"
+puts "Okay! Now generating new ingredient database..."
 
 url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 ingredient_serialized = open(url).read
@@ -22,4 +22,4 @@ ingredient['drinks'].each do |drink|
   Ingredient.create(name: drink["strIngredient1"])
 end
 
-puts "DB generated"
+puts "new ingredient database generated!"

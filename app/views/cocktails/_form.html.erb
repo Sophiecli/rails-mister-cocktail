@@ -1,9 +1,6 @@
-<div class="container">
-  <h1>Add new Cocktail! </h1>
-  <%= simple_form_for(@cocktail) do |f| %>
-    <%= f.input :name %>
-    <%= f.input :photo %>
-    <%= f.input :photo_cache, as: :hidden %>
-    <%= f.submit %>
-  <% end %>
-</div>
+<%= simple_form_for(@cocktail) do |f| %>
+  <%= f.input :name, hint: 'Macbeth\'s Witchy Brew' %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
+  <%= f.submit class: "btn" %>
+<% end %>
