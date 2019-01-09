@@ -3,6 +3,17 @@
     <h1>
       <span id="banner-typed-text"></span>
     </h1>
+    <!-- Search bar -->
+    <%= form_tag cocktails_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control nav-search-box",
+        placeholder: "search" %>
+    <% end %>
+    <!-- <div class="banner-content">
+      Know what you like? Then dig deeper to find what you want
+      <i class="fas fa-angle-down fa-2x"></i>
+    </div> -->
   </div>
   <div class="cocktail-list">
     <div class="cocktail-heading">
@@ -16,7 +27,7 @@
             <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cocktail.photo? ? (cl_image_path cocktail.photo) : (cl_image_path("Mister Cocktail App/gintonic"))%>')">
               <div class="card-category"><%= cocktail.name %></div>
               <div class="card-description">
-                <p>See more</p>
+                <p>See more for ingredients</p>
               </div>
             </div>
           <% end %>

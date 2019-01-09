@@ -13,7 +13,7 @@ require 'open-uri'
 puts "Cleansing out ingredient database..."
 Ingredient.destroy_all
 
-puts "Generating new ingredient database..."
+puts "Okay! Now generating new ingredient database..."
 
 url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 ingredient_serialized = open(url).read
@@ -40,3 +40,5 @@ puts "Adding Cocktails"
   drink.remote_photo_url = photos.sample
   drink.save
 end
+
+puts "Added new cocktails!"

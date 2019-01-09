@@ -1,18 +1,16 @@
-<%= render 'shared/navbar' %>
-<div class="body-container" class="background">
-  <%= cl_image_tag @cocktail.photo,
+<div class="banner">
+  <div class="dark-overlay">
+    <%= cl_image_tag @cocktail.photo,
       width: 250, height: 250, crop: :fill %>
-  <h1><%= @cocktail.name %></h1>
-  <% @cocktail.doses.each do |dose| %>
-    <p><%= dose.ingredient[:name] %>: <%= dose.description %></p>
-    <%= link_to cocktail_dose_path(dose), method: :delete, data: {confirm: "Are you sure?" } do %>
-      <i class="fas fa-trash"></i>
+    <h1><%= @cocktail.name %></h1>
+    <% @cocktail.doses.each do |dose| %>
+      <p><%= dose.ingredient[:name] %>: <%= dose.description %></p>
+      <%= link_to cocktail_dose_path(dose), method: :delete, data: {confirm: "Are you sure?" } do %>
+        <i class="fas fa-trash"></i>
+      <% end %>
     <% end %>
-  <% end %>
-  <br>
-  <%= link_to "Add ingredient", new_cocktail_dose_path(@cocktail), class: "btn btn-primary"  %>
-  <br>
-  <%= link_to "Edit Cocktail", edit_cocktail_path(@cocktail), class: "btn btn-primary"  %>
-  <br>
-  <%= link_to "Return to list", cocktails_path, class: "btn btn-primary" %>
+    <%= link_to "Add ingredient", new_cocktail_dose_path(@cocktail), class: "btn"  %>
+    <%= link_to "Edit Cocktail", edit_cocktail_path(@cocktail), class: "btn"  %>
+    <%= link_to "Return to list", cocktails_path, class: "btn" %>
+  </div>
 </div>
