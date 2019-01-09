@@ -39,7 +39,7 @@ gem 'algoliasearch-rails'
 # 3rd party platforms - to store stuff
 gem 'cloudinary'
 gem 'carrierwave', '~> 1.2'
-
+gem 'faker'
 gem 'rest-client', '>= 2.0'
 
 # Use ActiveStorage variant

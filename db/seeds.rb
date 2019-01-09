@@ -8,6 +8,7 @@
 
 require 'json'
 require 'open-uri'
+# require 'faker'
 
 puts "Cleansing out ingredient database..."
 Ingredient.destroy_all
@@ -22,4 +23,22 @@ ingredient['drinks'].each do |drink|
   Ingredient.create(name: drink["strIngredient1"])
 end
 
-puts "new ingredient database generated!"
+puts "Ingredients database has been generated"
+
+Cocktail.destroy_all
+
+# Cloudinary photos
+photos = ['https://res.cloudinary.com/sophiecli/image/upload/v1542347238/Mister%20Cocktail%20App/whiskeysour.jpg',
+          'https://res.cloudinary.com/sophiecli/image/upload/v1542347208/Mister%20Cocktail%20App/gintonic.jpg',
+          'https://res.cloudinary.com/sophiecli/image/upload/v1547019026/Mister%20Cocktail%20App/alcoholic-beverage-ale-beer-1323593.jpg',
+          'https://res.cloudinary.com/sophiecli/image/upload/v1547019027/Mister%20Cocktail%20App/alcoholic-bar-beverage-338713.jpg',
+          'https://res.cloudinary.com/sophiecli/image/upload/v1542347224/Mister%20Cocktail%20App/pinkpanther.jpg']
+
+puts "Adding Cocktails"
+5.times do
+  drink = Cocktail.create(name: Faker::Beer.name)
+  drink.remote_photo_url = photos.sample
+  drink.save
+end
+
+puts "Added new cocktails!"
