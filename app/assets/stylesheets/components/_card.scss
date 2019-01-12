@@ -8,7 +8,15 @@
   margin: 15px;
   background: linear-gradient(rgba(0,0,0,0.4));
   border-radius: 4px;
+  transition: all .2s ease-in-out;
 }
+
+.card:hover {
+  transition: all 0.3s ease;
+  box-shadow: 2px 4px 10px rgba(0,0,0,0.6);
+  transform: scale(1.02);
+}
+
 .card-user {
   position: absolute;
   right: 10px;
