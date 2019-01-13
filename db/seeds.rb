@@ -34,6 +34,8 @@ photos = ['https://res.cloudinary.com/sophiecli/image/upload/v1542347238/Mister%
           'https://res.cloudinary.com/sophiecli/image/upload/v1547019027/Mister%20Cocktail%20App/alcoholic-bar-beverage-338713.jpg',
           'https://res.cloudinary.com/sophiecli/image/upload/v1542347224/Mister%20Cocktail%20App/pinkpanther.jpg']
 
+
+
 puts "Adding Cocktails"
 5.times do
   drink = Cocktail.create(name: Faker::Beer.name)

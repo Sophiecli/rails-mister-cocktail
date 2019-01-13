@@ -6,23 +6,34 @@
 //   text-align: center;
 // }
 
-.btn {
-  margin: 10px;
+.btn-white{
   color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 2px;
+  padding: 10px;
   background-color: transparent;
 }
 
-.btn:hover {
+.btn-white:hover {
   color: #da552f;
   text-decoration: none;
   border: 1px solid #da552f;
   border-radius: 2px;
+  padding: 10px;
 }
 
 .img-round {
   border-radius: 50%;
   height: 3em;
   width: 3em;
+}
+
+.img-square {
+  width: 250px;
+  height: 250px;
+  border-radius: 2px;
+  margin: 10px;
 }
 
 .form-new {
@@ -39,4 +50,10 @@
 .fa-trash:hover {
   color: #da552f;
   text-decoration: none;
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  height: 35px;
 }

@@ -1,8 +1,11 @@
 <div class="container">
-  <div class="banner">
-    <div class="dark-overlay">
-      <h1>Add new ingredient to <%= @cocktail.name %></h1>
-      <%= render 'form' %>
+  <div class="row">
+    <div class="banner">
+      <div class="dark-overlay">
+        <%= cl_image_tag @cocktail.photo, class:"img-square"  %>
+        <h3>Add new ingredient to <%= @cocktail.name %></h3>
+        <%= render 'form' %>
+      </div>
     </div>
   </div>
 </div>
